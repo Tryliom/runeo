@@ -44,6 +44,10 @@ footer {
 	z-index: -1;
 }
 
+form {
+	display: unset;
+}
+
 .row-nav {
 	padding: 20px;
 	background-color: #3C3C3C;
@@ -284,6 +288,7 @@ label {
 		background-repeat: no-repeat;
 		width:32px;
 		height:32px;
+		cursor: pointer;
 	}
 
 	.menupc {

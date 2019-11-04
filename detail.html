@@ -90,7 +90,9 @@
 				<label>Vendredi 17 à 17h</label>
 			</div>
 			<div class="col-2 right offset-1">
-				<input type="submit" value="Modifier" class="common-button" onclick="edit()"/>
+				<form action="index.html">
+					<input type="submit" value="Modifier" class="common-button" />
+				</form>
 			</div>
 		</div>
 		<div class="row">
@@ -193,10 +195,6 @@
 		}
 
 		document.getElementById("menu").classList.toggle("show");
-	}
-
-	function edit() {
-		window.open("index.html");
 	}
 
 </script>

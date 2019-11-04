@@ -34,6 +34,9 @@ footer {
   margin-bottom: 0px;
   z-index: -1; }
 
+form {
+  display: unset; }
+
 .row-nav {
   padding: 20px;
   background-color: #3C3C3C;
@@ -220,7 +223,8 @@ label {
     background-image: url("../images/hamburger.svg");
     background-repeat: no-repeat;
     width: 32px;
-    height: 32px; }
+    height: 32px;
+    cursor: pointer; }
 
   .menupc {
     opacity: 0;

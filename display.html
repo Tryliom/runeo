@@ -80,10 +80,10 @@
 
 	<div class="container space-top">
 		<div class="row">
-			<div class="col-4 col-lg-2 offset-3 offset-lg-5 offset-xl-6 center">
+			<div class="col-4 col-lg-2 offset-2 offset-lg-4 offset-xl-5 center">
 				<label class="right">Ligne par pages: </label>
 			</div>
-			<div class="col-2 col-xl-1">
+			<div class="col-3 col-xl-2">
 				<div class="form-group common-select center no-margin">
 				  <select class="form-control">
 				    <option selected="selected">10</option>
@@ -110,7 +110,7 @@
 					</div>
 					<div class="row filter-content common-text">
 						<div class="col">
-							<label for="f1" class="left"><input class="common-checkbox center" type="checkbox" id="f1" name="f1" /> Créé par: Alexis </label>
+							<label for="f1" class="left"><input class="common-checkbox center" type="checkbox" id="f1" name="f1" checked /> Créé par: Alexis </label>
 						</div>
 					</div>
 					<div class="row filter-content common-text">
@@ -158,7 +158,7 @@
 							<label for="f11" class="left"><input class="common-checkbox center" type="checkbox" id="f11" name="f11" /> Créé par: </label> 
 						</div>
 						<div class="col-6">
-							<input class="common-input" type="text" placeholder="Nom" />
+							<input class="common-input" type="text" placeholder="Nom" style="height: 20px;" />
 						</div>
 					</div>
 				</div>
@@ -297,13 +297,13 @@
 			</div>
 		</div>
 		<div class="row space-top">
-			<div class="col-1 offset-6 center">
+			<div class="col-2 offset-3 col-lg-1 offset-lg-6 center">
 				<input type="submit" value="<" class="common-button" />
 			</div>
-			<div class="col-1 center">
+			<div class="col-2 col-lg-1 center">
 				<input type="submit" value="1" class="common-button" />
 			</div>
-			<div class="col-1 center">
+			<div class="col-2 col-lg-1 center">
 				<input type="submit" value=">" class="common-button" />
 			</div>
 		</div>
@@ -332,8 +332,6 @@
 		for (i = 0; i < x.length; i++) {
 		  x[i].classList.toggle("show");
 		}
-
-		document.getElementById("menu").classList.toggle("show");
 	}
 
 	function showEtape(id) {
