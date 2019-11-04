@@ -1,0 +1,297 @@
+$border-color: rgba(65,65,65,0.3);
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(130,130,130,0.7);
+	border-radius: 10px;
+
+	&:hover {
+		background-color: rgba(130,130,130,0.9);
+	}
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #3C3C3C;
+}
+
+html {
+	height: calc(100vh + 20px);
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+	min-height: 100%;
+	background-color: #62a5a5;
+	color: white;
+	margin-bottom: 20px;
+}
+
+footer {
+	-webkit-mask: url("../images/footer.svg") no-repeat;
+	mask: url("../images/footer.svg") no-repeat;
+	background-color: steelblue;
+	position: fixed;
+	height: 150px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin-bottom: 0px;
+	z-index: -1;
+}
+
+.row-nav {
+	padding: 20px;
+	background-color: #3C3C3C;
+	border-bottom: 1pt solid rgba(0,0,0,0.4);
+	align-items: center;
+	cursor: pointer;
+	font-size: 14px;
+	color: white;
+}
+
+.center {
+	text-align: center;
+	align-items: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.space-top {
+	margin-top: 30px;
+}
+
+.space-bottom {
+	margin-bottom: 20px;
+}
+
+.no-margin {
+	margin: 0 auto;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.fullheight {
+	height:100%;
+}
+
+.rect {
+	border: 1pt solid $border-color;
+	margin-bottom: 20px;
+	padding: 20px;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.status {
+	opacity: 0.7;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.bottom-border {
+	border-bottom: 1pt solid $border-color;
+}
+
+.map {
+	width:100%;
+	height: 200px;
+	background-color: grey;
+}
+
+.common-title {
+	font-size: 30px;
+	font-weight: 800;
+}
+
+.common-sub-title {
+	font-size: 20px;
+	font-weight: 800;
+}
+
+.common-text {
+	font-size: 13px;
+}
+
+.common-input {
+	font-size: 13px;
+	padding: 3px;
+	border: 1pt solid rgba(214,214,214,0.7);
+	background-color: rgba(214,214,214,0.7);
+	width: 100%;
+	font-weight: bold;
+
+	&::placeholder {
+		opacity: 0.7;
+	}
+}
+
+.common-checkbox {
+	font-size: 13px;
+	font-weight: bold;
+	width: 13px;
+	height: 13px;
+	padding: 0;
+	margin:0;
+	margin-bottom: 3px;
+	vertical-align: bottom;
+	position: relative;
+	top: -1px;
+	*overflow: hidden;
+}
+
+.common-button {
+	font-size: 13px;
+	padding: 3px;
+	border: 1pt solid rgba(214,214,214,0.7);
+	width: 100%;
+	font-weight: bold;
+	transition-duration: 0.2s;
+
+	&:hover {
+		background-color: rgba(214,214,214,0.7);
+		transition-duration: 0.2s;
+	}
+}
+
+.common-select * {
+	font-size: 11px;
+}
+
+label {
+	display: block;
+  	padding-left: 15px;
+  	text-indent: -15px;
+}
+
+.space {
+	margin: 5px 0;
+}
+
+.menu-link {
+	opacity: 0;
+	visibility: hidden;
+	height: 0;
+}
+
+#confirm1, #confirm2 {
+	margin-left: 14px;
+}
+
+.filter {
+	height: 16px;
+	width: 16px;
+	margin-top: 6px;
+	cursor: pointer;
+
+	background-image: url("../images/add.png");
+	background-repeat: no-repeat;
+
+	&.show {
+		background-image: url("../images/minus.png");	
+	}
+}
+
+.filter-content {		
+	height: 0;
+	width: 100%;
+	z-index: 10;
+	margin: 0;
+
+	visibility: hidden;
+    opacity: 0;
+
+    &.show {
+		visibility: visible;
+	    opacity: 1;
+		
+		height: 100%;
+	    position: relative;
+	    width: 100%;
+    }
+}
+
+.row-display {
+	border-bottom: 1pt solid $border-color;
+	opacity: 1;
+}
+
+.etape {
+	font-size: 13px;
+	padding: 3px;
+	border: 1pt solid rgba(214,214,214,0.7);
+	font-weight: bold;
+	width: 100px;
+	margin: 0;
+
+
+	&.show {
+		font-weight: normal;
+		width: 100%;
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+
+	#menu {
+		height: 32px;
+
+		&.show {
+			height:100%;
+		}
+	}
+
+	.menu-link {		
+		height: 30px;
+		border-bottom: 1pt solid #121212;
+		width: 100%;
+		z-index: 10;
+		cursor: pointer;
+		margin: 0;
+
+		visibility: hidden;
+	    opacity: 0;
+
+	    &.show {
+			visibility: visible;
+		    opacity: 1;
+
+		    position: relative;
+		    margin-left: -100px;
+		    width: calc(100% + 100px);
+	    }
+	}
+
+	.menu-icon {
+		background-image: url("../images/hamburger.svg");
+		background-repeat: no-repeat;
+		width:32px;
+		height:32px;
+	}
+
+	.menupc {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.row-nav {
+		cursor: default;
+	}
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/main.css" />
+
+	<title>Runeo</title>
+
+	<div class="container-fluid">
+		<div class="row row-nav">
+			<div class="col-1 menupc">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<img width="32" height="32" src="images/logo_runeo.svg" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-1 menupc">
+				<div class="container">
+					<div class="row">
+						<div class="col center">
+							Runs
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-4 menupc">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 center">
+							Véhicules
+						</div>
+						<div class="col-4 center">
+							Chauffeurs
+						</div>
+						<div class="col-4 center">
+							Groupes
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-4 menupc">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 center">
+							Horaires
+						</div>
+						<div class="col-4 center">
+							Kiéla?
+						</div>
+						<div class="col-4 center">
+							Artistes
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-1 center menupc">
+				Alexis
+			</div>
+			<div class="col-1">
+				<div class="menu-icon" onclick="showMenu()"></div>
+				<div id="menu">
+					<div class="menu-link">Runs</div>
+					<div class="menu-link">Véhicules</div>
+					<div class="menu-link">Chauffeurs</div>
+					<div class="menu-link">Groupes</div>
+					<div class="menu-link">Horaires</div>
+					<div class="menu-link">Kiéla?</div>
+					<div class="menu-link">Artistes</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+</head>
+<body>
+
+	<div class="container space-top">
+		<div class="row">
+			<div class="col common-title">
+				Création d'un run
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<div class="common-sub-title">
+					Informations générales
+				</div>
+				<div class="container space-top">
+					<div class="row space">
+						<div class="col-2 common-text">
+							Artiste*
+						</div>
+						<div class="col-10 common-text">
+							<input class="common-input" type="text" placeholder="Ex: Céline Dion" />
+						</div>
+					</div>
+					<div class="row space">
+						<div class="col-2 common-text">
+							Passagers
+						</div>
+						<div class="col-10 common-text">
+							<input class="common-input" type="number" placeholder="Ex: 1" value="1" min="1" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-5 offset-2 common-text">
+							<label for="confirm1"><input class="common-checkbox center" type="checkbox" id="confirm1" name="confirm1" /> à confirmer</label>
+						</div>
+					</div>
+					<div class="row space">
+						<div class="col-2 common-text">
+							Départ le
+						</div>
+						<div class="col-10 common-text">
+							<input class="common-input" type="date" id="date" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-5 offset-2 common-text">
+							<label for="confirm2"><input class="common-checkbox center" type="checkbox" id="confirm2" name="confirm2" /> à confirmer</label>
+						</div>
+					</div>
+					<div class="row space">
+						<div class="col-2 common-text">
+							Information
+						</div>
+						<div class="col-10 common-text">
+							<textarea class="common-input" placeholder="Informations supplémentaires" rows="4"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6">
+				<div class="common-sub-title">
+					Lieux de passage
+				</div>
+				<div class="container space-top">
+					<div class="row space">
+						<div class="col-2 common-text">
+							Départ
+						</div>
+						<div class="col-10 common-text">
+							<input class="common-input" type="text" placeholder="Lieu A" />
+						</div>
+					</div>
+					<div class="row space">
+						<div class="col-2 common-text">
+							Arrivée
+						</div>
+						<div class="col-10 common-text">
+							<input class="common-input" type="text" placeholder="Lieu B" />
+						</div>
+					</div>
+					<div class="row space">
+						<div class="col-2 common-text">
+							Étapes
+						</div>
+						<div class="col-10 common-text">
+							<input class="common-input" type="text" placeholder="Ex: Lausanne,Morges" />
+						</div>
+					</div>					
+					<div class="row space">
+						<div class="col-2 common-text">
+							Temps estimé
+						</div>
+						<div class="col-6 common-text">
+							<input class="common-input" type="number" placeholder="Ex: 45 (min)" min="1" />
+						</div>
+						<div class="col-4 common-text">
+							<input class="common-button" type="submit" value="Calculer..." />
+						</div>
+					</div>
+					
+				</div>
+				<div class="common-sub-title">
+					Runners
+				</div>
+				<div class="container space-top">
+					<div class="row space">
+						<div class="col-2 common-text">
+							Runner 1
+						</div>
+						<div class="col-10 common-text">
+							<input class="common-input" type="text" placeholder="Conducteur" />
+						</div>
+					</div>
+					<div class="row space">
+						<div class="col-2 common-text">
+							Véhicule
+						</div>
+						<div class="col-5 common-text">
+							<input class="common-input" type="text" placeholder="Type de véhicule" />
+						</div>
+						<div class="col-5 common-text">
+							<input class="common-input" type="text" placeholder="Véhicule" />
+						</div>
+					</div>
+					<div class="row space">
+						<div class="col-5 offset-2 common-text">
+							<input class="common-button" type="submit" value="Ajouter" />
+						</div>
+						<div class="col-5 common-text">
+							<input class="common-button" type="submit" value="Remplir auto.." />
+						</div>						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2">
+				<form action="display.html">
+					<input class="common-button" type="submit" value="Valider" />
+				</form>
+			</div>
+		</div>
+	</div>
+	<footer>
+
+	</footer>
+</body>
+</html>
+
+<script>
+	document.getElementById('date').valueAsDate = new Date();
+
+	function showMenu() {
+		var x = document.getElementsByClassName("menu-link");
+		var i;
+		for (i = 0; i < x.length; i++) {
+		  x[i].classList.toggle("show");
+		}
+
+		document.getElementById("menu").classList.toggle("show");
+	}
+
+</script>

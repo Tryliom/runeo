@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/main.css" />
+
+	<title>Runeo</title>
+
+	<div class="container-fluid">
+		<div class="row row-nav">
+			<div class="col-1 menupc">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<img width="32" height="32" src="images/logo_runeo.svg" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-1 menupc">
+				<div class="container">
+					<div class="row">
+						<div class="col center">
+							Runs
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-4 menupc">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 center">
+							Véhicules
+						</div>
+						<div class="col-4 center">
+							Chauffeurs
+						</div>
+						<div class="col-4 center">
+							Groupes
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-4 menupc">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 center">
+							Horaires
+						</div>
+						<div class="col-4 center">
+							Kiéla?
+						</div>
+						<div class="col-4 center">
+							Artistes
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-1 center menupc">
+				Alexis
+			</div>
+			<div class="col-1">
+				<div class="menu-icon" onclick="showMenu()"></div>
+				<div id="menu">
+					<div class="menu-link">Runs</div>
+					<div class="menu-link">Véhicules</div>
+					<div class="menu-link">Chauffeurs</div>
+					<div class="menu-link">Groupes</div>
+					<div class="menu-link">Horaires</div>
+					<div class="menu-link">Kiéla?</div>
+					<div class="menu-link">Artistes</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+</head>
+<body>
+
+	<div class="container space-top">
+		<div class="row rect">
+			<div class="col-4">
+				<label>Céline Dion, 1pax </label>
+			</div>
+			<div class="col-1">
+				<label class="status">Ouvert</label>
+			</div>
+			<div class="col-3 offset-1">
+				<label>Vendredi 17 à 17h</label>
+			</div>
+			<div class="col-2 right offset-1">
+				<input type="submit" value="Modifier" class="common-button" onclick="edit()"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-md-8 rect">
+				<div class="container no-padding">
+					<div class="row">
+						<div class="col-4 bold left common-sub-title">
+							Parcours
+						</div>
+						<div class="col-8 bold right common-sub-title">
+							Durée: 45min environ
+						</div>
+					</div>
+					<div class="row bottom-border space-top">
+						<div class="col-3 bold left common-text">
+							Départ
+						</div>
+						<div class="col-6 bold center common-text">
+							Étapes
+						</div>
+						<div class="col-3 bold right common-text">
+							Arrivée
+						</div>
+					</div>
+					<div class="row space-top">
+						<div class="col-3 left common-text">
+							Lausanne
+						</div>
+						<div class="col-6 center common-text">
+							Chailly, Place de la Palud, Gare de Morges
+						</div>
+						<div class="col-3 right common-text">
+							Morges
+						</div>
+					</div>
+					<div class="row space-top">
+						<div class="col-6 offset-3 center map rect"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-3 offset-md-1 rect">
+				<div class="container no-padding">
+					<div class="row">
+						<div class="col left bold common-sub-title">
+							Nombre de passagers:
+						</div>
+					</div>
+					<div class="row space-top space-bottom">
+						<div class="col left common-text">
+							2 passagers
+						</div>
+					</div>
+					<div class="row">
+						<div class="col left bold common-sub-title">
+							Informations supplémentaires:
+						</div>
+					</div>
+					<div class="row space-top">
+						<div class="col left common-text">
+							Aucunes
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col rect">
+				<div class="container no-padding">
+					<div class="row">
+						<div class="col bold left common-sub-title">
+							Runners
+						</div>
+					</div>
+					<div class="row space-top space-bottom">
+						<div class="col left common-text">
+							1 runner défini: MV13 / Gilles
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2 offset-5 center space-top space-bottom">
+				<input type="submit" value="Plus d'infos..." class="common-button" />
+			</div>
+		</div>
+	</div>
+	<footer>
+
+	</footer>
+</body>
+</html>
+
+<script>
+	function showMenu() {
+		var x = document.getElementsByClassName("menu-link");
+		var i;
+		for (i = 0; i < x.length; i++) {
+		  x[i].classList.toggle("show");
+		}
+
+		document.getElementById("menu").classList.toggle("show");
+	}
+
+	function edit() {
+		window.open("index.html");
+	}
+
+</script>

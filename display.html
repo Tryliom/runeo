@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/main.css" />
+
+	<title>Runeo</title>
+
+	<div class="container-fluid">
+		<div class="row row-nav">
+			<div class="col-1 menupc">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<img width="32" height="32" src="images/logo_runeo.svg" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-1 menupc">
+				<div class="container">
+					<div class="row">
+						<div class="col center">
+							Runs
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-4 menupc">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 center">
+							Véhicules
+						</div>
+						<div class="col-4 center">
+							Chauffeurs
+						</div>
+						<div class="col-4 center">
+							Groupes
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-4 menupc">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 center">
+							Horaires
+						</div>
+						<div class="col-4 center">
+							Kiéla?
+						</div>
+						<div class="col-4 center">
+							Artistes
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-1 center menupc">
+				Alexis
+			</div>
+			<div class="col-1">
+				<div class="menu-icon" onclick="showMenu()"></div>
+				<div id="menu">
+					<div class="menu-link">Runs</div>
+					<div class="menu-link">Véhicules</div>
+					<div class="menu-link">Chauffeurs</div>
+					<div class="menu-link">Groupes</div>
+					<div class="menu-link">Horaires</div>
+					<div class="menu-link">Kiéla?</div>
+					<div class="menu-link">Artistes</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+</head>
+<body>
+
+	<div class="container space-top">
+		<div class="row">
+			<div class="col-4 col-lg-2 offset-3 offset-lg-5 offset-xl-6 center">
+				<label class="right">Ligne par pages: </label>
+			</div>
+			<div class="col-2 col-xl-1">
+				<div class="form-group common-select center no-margin">
+				  <select class="form-control">
+				    <option selected="selected">10</option>
+				    <option>25</option>
+				    <option>50</option>
+				    <option>100</option>
+				  </select>
+				</div>
+			</div>
+			<div class="col-3 common-text">
+				<input class="common-input" type="text" placeholder="Rechercher..." />
+			</div>
+		</div>
+		<div class="row space-top">
+			<div class="col-12 col-lg-3">
+				<div class="container rect">
+					<div class="row">
+						<div class="col-11 col-lg-10">
+							<label>Filtres (1)</label>
+						</div>
+						<div class="col-1 col-lg-2">
+							<div id="drop" class="filter" onclick="showFilter()"></div>
+						</div>
+					</div>
+					<div class="row filter-content common-text">
+						<div class="col">
+							<label for="f1" class="left"><input class="common-checkbox center" type="checkbox" id="f1" name="f1" /> Créé par: Alexis </label>
+						</div>
+					</div>
+					<div class="row filter-content common-text">
+						<div class="col">
+							<label for="f2" class="left"><input class="common-checkbox center" type="checkbox" id="f2" name="f2" /> Erreur </label>
+						</div>
+					</div>
+					<div class="row filter-content common-text">
+						<div class="col">
+							<label for="f3" class="left"><input class="common-checkbox center" type="checkbox" id="f3" name="f3" /> Annulé </label>
+						</div>
+					</div>
+					<div class="row filter-content common-text">
+						<div class="col">
+							<label for="f4" class="left"><input class="common-checkbox center" type="checkbox" id="f4" name="f4" /> Brouillon </label>
+						</div>
+					</div>
+					<div class="row filter-content common-text">
+						<div class="col">
+							<label for="f6" class="left"><input class="common-checkbox center" type="checkbox" id="f6" name="f6" /> Ouvert </label>
+						</div>
+					</div>
+					<div class="row filter-content common-text">
+						<div class="col">
+							<label for="f7" class="left"><input class="common-checkbox center" type="checkbox" id="f7" name="f7" /> Terminé </label>
+						</div>
+					</div>
+					<div class="row filter-content common-text">
+						<div class="col">
+							<label for="f8" class="left"><input class="common-checkbox center" type="checkbox" id="f8" name="f8" /> Préparation </label>
+						</div>
+					</div>
+					<div class="row filter-content common-text">
+						<div class="col">
+							<label for="f9" class="left"><input class="common-checkbox center" type="checkbox" id="f9" name="f9" /> Presque </label>
+						</div>
+					</div>
+					<div class="row filter-content common-text">
+						<div class="col">
+							<label for="f10" class="left"><input class="common-checkbox center" type="checkbox" id="f10" name="f10" /> En route </label>
+						</div>
+					</div>
+					<div class="row filter-content common-text">
+						<div class="col-6">
+							<label for="f11" class="left"><input class="common-checkbox center" type="checkbox" id="f11" name="f11" /> Créé par: </label> 
+						</div>
+						<div class="col-6">
+							<input class="common-input" type="text" placeholder="Nom" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-lg-9">
+				<div class="container rect">
+					<div class="row row-display">
+						<div class="col-2">
+							Nom
+						</div>
+						<div class="col-2">
+							Parcours
+						</div>
+						<div class="col-4 offset-1">
+							Date / Véhicules / Chauffeur
+						</div>
+						<div class="col-1">
+							Status
+						</div>
+						<div class="col-2 right">
+							Action
+						</div>
+					</div>
+					<div class="row row-display">
+						<div class="col-5">
+							<div class="container-fluid no-padding">
+								<div class="row no-padding">
+									<div class="col">
+										Céline dion, 1pax
+									</div>
+								</div>
+								<div class="row no-padding">
+									<div class="col">
+										<p> Lausanne => <p id="etape1" class="etape" onclick="showEtape('etape1')"> Étapes... </p> Morges </p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="container-fluid no-padding">
+								<div class="row no-padding">
+									<div class="col">
+										Vendredi 17 à 17h
+									</div>
+								</div>
+								<div class="row no-padding">
+									<div class="col">
+										MV13 / Gilles
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-1">
+							Ouvert
+						</div>
+						<div class="col-2 right">
+							<img class="pointer" width="16" src="images/edit.svg" onclick="edit()" />
+							<img class="pointer" width="16" src="images/open.png" onclick="display()" />
+						</div>
+					</div>
+					<div class="row row-display">
+						<div class="col-5">
+							<div class="container-fluid no-padding">
+								<div class="row no-padding">
+									<div class="col">
+										Marc cop & cie, 7pax
+									</div>
+								</div>
+								<div class="row no-padding">
+									<div class="col">
+										<p> Lausanne => Renens </p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="container-fluid no-padding">
+								<div class="row no-padding">
+									<div class="col">
+										??
+									</div>
+								</div>
+								<div class="row no-padding">
+									<div class="col">
+										MV2 / Robert
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-1">
+							Brouillon
+						</div>
+						<div class="col-2 right">
+							<img class="pointer" width="16" src="images/edit.svg" onclick="edit()" />
+							<img class="pointer" width="16" src="images/open.png" onclick="display()" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-5">
+							<div class="container-fluid no-padding">
+								<div class="row no-padding">
+									<div class="col">
+										Exemple diz, 4pax
+									</div>
+								</div>
+								<div class="row no-padding">
+									<div class="col">
+										<p> ?? </p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="container-fluid no-padding">
+								<div class="row no-padding">
+									<div class="col">
+										??
+									</div>
+								</div>
+								<div class="row no-padding">
+									<div class="col">
+										?? / ??
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-1">
+							Brouillon
+						</div>
+						<div class="col-2 right">
+							<img class="pointer" width="16" src="images/edit.svg" onclick="edit()" />
+							<img class="pointer" width="16" src="images/open.png" onclick="display()" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row space-top">
+			<div class="col-1 offset-6 center">
+				<input type="submit" value="<" class="common-button" />
+			</div>
+			<div class="col-1 center">
+				<input type="submit" value="1" class="common-button" />
+			</div>
+			<div class="col-1 center">
+				<input type="submit" value=">" class="common-button" />
+			</div>
+		</div>
+	</div>
+	<footer>
+
+	</footer>
+</body>
+</html>
+<script>
+	function showMenu() {
+		var x = document.getElementsByClassName("menu-link");
+		var i;
+		for (i = 0; i < x.length; i++) {
+		  x[i].classList.toggle("show");
+		}
+
+		document.getElementById("menu").classList.toggle("show");
+	}
+
+	function showFilter() {
+		document.getElementById("drop").classList.toggle("show");
+
+		var x = document.getElementsByClassName("filter-content");
+		var i;
+		for (i = 0; i < x.length; i++) {
+		  x[i].classList.toggle("show");
+		}
+
+		document.getElementById("menu").classList.toggle("show");
+	}
+
+	function showEtape(id) {
+		console.log(id);
+		var x = document.getElementById(id);
+		x.classList.add("show");
+
+		x.innerHTML = "Exemple, Exemple, Exemple, Exemple, Exemple, Exemple, Exemple, Exemple, Exemple, Exemple, Exemple, Exemple";
+
+		x.removeAttribute("id");
+	}
+
+	function edit() {
+		window.open("index.html");
+	}
+
+	function display() {
+		window.open("detail.html");
+	}
+
+</script>
