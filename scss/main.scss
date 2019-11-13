@@ -163,14 +163,18 @@ form {
 .common-button {
 	font-size: 13px;
 	padding: 3px;
-	border: 1pt solid rgba(214,214,214,0.7);
+	border: none;
 	width: 100%;
 	font-weight: bold;
-	transition-duration: 0.2s;
+	color: steelblue;
+	background-color: rgba(255,255,255,0.6);
+	border: 1pt solid steelblue;
+
+	transition-duration: 0.4s;
 
 	&:hover {
-		background-color: rgba(214,214,214,0.7);
-		transition-duration: 0.2s;
+		transition-duration: 0.4s;
+		background-color: rgba(255,255,255,1);
 	}
 }
 
@@ -250,6 +254,10 @@ label {
 		width: 100%;
 		padding: 0;
 	}
+}
+
+.carousel-control-next {
+	width: 10%;
 }
 
 @media only screen and (max-width: 767px) {
